@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="flats">
+  <div class="card mb-4">
+    <%= render @flat %>
+    <div class="card-body">
+      <p>
+        <%= link_to "Back", flats_path, class: "btn btn-secondary" %>
+        <%= link_to "Edit", edit_flat_path(@flat), class: "btn btn-warning mr-2" %>
+        <%= link_to "Delete", flat_path(@flat), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger" %>
+      </p>
+    </div>
+  </div>
+</div>
